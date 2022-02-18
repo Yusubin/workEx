@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>로그인</title>
+</head>
+<body>
+<form action="Login" method ="post" name="frmlogin" >
+	아이디:<input type="text" name="user_id"/><br>
+	패스워드:<input type="password" name="user_pw"/><br>
+		<div class="btn"><button class="btn_style_submit" onclick="location.href='${contextPath}/memberWrite'">회원가입</button></div>
+	<input type="submit" value="로그인"/><br>
+</form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+package pack03;
+
+import java.awt.Color;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
+public class memberView {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String id = JOptionPane.showInputDialog("ID를 입력");
+		int a=Integer.parseInt(age);
+		System.out.println(a);
+		JOptionPane.showMessageDialog(null, "내년나이는"+(a+1));
+	}
+
+}

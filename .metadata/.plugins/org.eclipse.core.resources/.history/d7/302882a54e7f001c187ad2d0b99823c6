@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*"%>
+<%
+	try {
+		Class.forName("org.mariadb.jdbc.Driver1");
+	} catch (ClassNotFoundException e) {
+		// TODO Auto-generated catch block
+		out.println(e.printStackTrace());
+	}
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JDBC</title>
+</head>
+<body>
+
+</body>
+</html>

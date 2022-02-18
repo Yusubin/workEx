@@ -1,0 +1,20 @@
+package pack02.subPack;
+
+public class RoomMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		TV tv1=new TV();
+		TV tv2=new TV();
+		
+		
+		tv1.ch=7;
+		tv1.vol=9;
+		tv1.onOff=true;
+				
+				
+	
+		
+	}
+
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+</form> 
+	<h1>글 수정</h1>
+	<hr color="yellow">	
+	<form action="update.jsp">
+	시퀀스:<input type="text" name="idx">><br>
+	제목:<input type="text" name="title"><br>
+	내용:<input type="text" name="content" style="width:400px; height:300px"><br>
+	<button>글 수정</button>
+	</form> 
+	
+</body>
+</html>

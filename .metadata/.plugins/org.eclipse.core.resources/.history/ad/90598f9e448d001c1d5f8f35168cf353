@@ -1,0 +1,36 @@
+package pack03;
+
+public class accountVO {
+
+	private String account_name;
+	private String price;
+	private String name;
+	
+	public String getAccount_name() {
+		return account_name;
+	}
+	public void setAccount_name(String account_name) {
+		this.account_name = account_name;
+	}
+	public String getPrice() {
+		return price;
+	}
+	public void setPrice(String price) {
+		this.price = price;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	
+	@Override
+	public String toString() {
+		return "accountVO [account_name=" + account_name + ", price=" + price + ", name=" + name + "]";
+	}
+	
+	
+	
+}

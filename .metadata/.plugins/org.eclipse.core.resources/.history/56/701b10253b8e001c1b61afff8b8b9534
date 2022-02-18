@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<script>
+
+</script>
+</head>
+<body>
+
+	<h1>글 수정</h1>
+	<hr color="blue">	
+	<form action="update.jsp" method="get">
+
+	시퀀스:<input type="text" name="idx"><br>
+	제목:<input type="text" name="title"><br>
+	내용:<input type="text" name="content" style="width:400px; height:300px"> <button>확인</button><br>
+	
+	</form> 
+	<button onclick="location = 'boardList.jsp';">글 목록</button>
+	<button onclick="location = 'deleteForm.html';">글 삭제</button>
+	<button onclick="location = 'index.html';">글 작성</button>
+</body>
+</html>

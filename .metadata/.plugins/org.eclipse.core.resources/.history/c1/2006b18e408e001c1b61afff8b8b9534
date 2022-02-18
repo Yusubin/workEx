@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>글쓰기</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript">
+	   var frm = document.form;
+	   function insert(){
+	    	var frm = document.form;
+	    	if(frm.title.value == ""){
+	    		alert('제목을 해주세요.');
+	    		return;
+	    	}
+	    	if(frm.name.value == ""){
+	    		alert("작성자 이름을 입력해주세요.");
+	    		return;
+	    	}
+	    	if(frm.content.value == ""){
+	    		alert("내용을 입력해주세요.");
+	    		return;
+	    	}
+	    	if(confirm("게시글을 등록 하시겠습니까?")){
+	    		frm.submit();
+	    	}
+	    }
+	    
+	</script>
+	</head>
+	<body>
+	<h1>글 작성</h1>
+	<hr color="blue">	
+	<form action="create.jsp"  name="form" method="get" >
+		제목:<input type="text" name="title"><br>
+		글쓴이:<input type="text" name="name"><br>
+		내용:<input type="text" name="content" style="width:400px; height:300px"><br>
+	</form> 
+	<button onclick="insert()">글작성</button><br>
+	<button onclick="location = 'boardList.jsp';">글 목록</button>
+	<button onclick="location = 'deleteForm.html';">글 삭제</button>
+	<button onclick="location = 'modifyForm.html';">글 수정</button>
+	
+</html>

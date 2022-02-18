@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>팝업</title>
+</head>
+<body>
+팝업창입니다. <br>
+<form>
+	<input type="checkbox" onclick="setPopupstart(this)"/>
+</form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<%@page import="java.util.ArrayList"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+      <%@page import="web.MemberDAO"%>
+<%@page import="web.MemberVO"%>
+    <% 
+    	String id=request.getParameter("id");
+    
+	    MemberVO vo = new MemberVO();
+	    vo.setId(id);
+	    //ctrl+shft+m  (in JSP)
+	    //ctrl+shft+o (in JAVA)
+	    MemberDAO dao = new MemberDAO();
+	    ArrayList<MemberVO> list= dao.readAll();
+
+    
+    %>
+    
+    <!-- 
+    	한줄복사: 컨트롤 +알트+화살표 아래
+    	한줄이동:알트 화살표방향
+    	한줄 삭제: 컨트롤 d
+    	새로만들기 : 컨트롤 n
+    	저장 : 컨트롤 s
+     -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

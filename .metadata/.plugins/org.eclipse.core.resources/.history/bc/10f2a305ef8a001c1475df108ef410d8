@@ -1,0 +1,45 @@
+package web.controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import web.dao.MemberDAO;
+import web.vo.MemberVO;
+
+/**
+ * Servlet implementation class memberUpdateServlet
+ */
+@WebServlet("/memberUpdate")
+public class memberUpdateServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("utf-8");
+		MemberDAO memberDAO=new 	MemberDAO();
+		MemberVO memberVO=new	MemberVO();
+
+		memberVO.setM_idx(Integer.parseInt(request.getParameter("m_idx")));
+		memberVO.setM_pw((String)request.getParameter("m_pw"));
+		memberVO.setM_email((String)request.getParameter("m_email"));
+		memberVO.setM_phone((String)request.getParameter("m_phone"));
+		memberVO.setM_name((String)request.getParameter("m_name"));
+		
+	
+		MemberVO memberVO =memberDAO.member_correction(m_idx);
+		
+		response.setContentType("text/html; charset=utf-8");
+		PrintWriter out =response.getWriter();
+		
+		out.println("<script>");
+		out.println("alert('"+memberVO.getM_name()+"님 회원가입되었습니다')");
+		out.println("location='"+request.getContextPath()+"' ");	
+		out.println("</script>");
+	}
+
+}

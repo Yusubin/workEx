@@ -1,0 +1,35 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+    <%@page import="web.MemberDAO"%>
+<jsp:useBean id="vo" class="web.MemberVO">
+	<jsp:setProperty name="vo" property="*" />
+</jsp:useBean>
+<!-- 
+
+MemberVO vo = new MemberVO();
+String id=request.getParameter("id");
+String id=request.getParameter("pw");
+vo.setId(id);
+vo.setId(pw);
+
+MemberDAO dao = new MemberDAO();
+MemberVO vo2= dao.readOne(vo);
+
+ -->
+<%
+	
+	boolean result = dao.login(vo);
+
+
+%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

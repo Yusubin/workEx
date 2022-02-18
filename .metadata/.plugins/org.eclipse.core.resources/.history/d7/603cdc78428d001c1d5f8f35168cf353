@@ -1,0 +1,28 @@
+package pack03;
+
+public class accountDAO {
+	public void create(accountVO accountVo) {
+		
+		System.out.println("회원가입:"+accountVo);
+		System.out.println("vo에서 전달받은 값:"+accountVo);
+		
+		String name=accountVo.getName();
+		String price=accountVo.getPrice();
+		String account_name=accountVo.getAccount_name();
+		
+		System.out.println("전달받은 id:"+id+"전달받은 pw:"+pw+"전달받은 name:"+name+"전달받은 tel:"+tel);
+		
+		
+	}
+	
+	public void login(accountVO accountVo) {
+		
+		System.out.println("회원 로그인");
+	}
+	
+	public void update(accountVO accountVo) {
+		System.out.println("회원정보업데이트요청");
+	}
+	public void delete(accountVO accountVo) {System.out.println("회원정보 삭제");}
+	
+}

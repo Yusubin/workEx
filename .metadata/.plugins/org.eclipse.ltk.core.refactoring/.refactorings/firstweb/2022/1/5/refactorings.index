@@ -1,0 +1,5 @@
+1643272933003	Move 'jdbc.jsp' to 'webapp'
+1643341300897	Move 'member.html' to 'webapp'
+1643351555722	Rename resource 'jdbc.jsp'
+1643351570289	Rename resource 'memberlist.jsp'
+1643355230231	Rename type 'DBConnection'

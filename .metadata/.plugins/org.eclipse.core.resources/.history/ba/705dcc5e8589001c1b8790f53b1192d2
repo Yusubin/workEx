@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>회원정보뷰</h2>
+	<table>
+		<tr>
+			<td>시퀀스</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>이름</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>아이디</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>비밀번호</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>전화번호</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>이메일</td>
+			<td><%=m_email%></td>
+		</tr>
+		<tr>
+			<td>수정일</td>
+			<td><%=m_mdfydate%></td>
+		</tr>
+		<tr>
+			<td>등록일</td>
+			<td><%=m_rgstdate%></td>
+		</tr>
+	</table>
+	<input type="button" onclick="location='memberList.jsp'" value="목록">
+
+
+</body>
+</html>

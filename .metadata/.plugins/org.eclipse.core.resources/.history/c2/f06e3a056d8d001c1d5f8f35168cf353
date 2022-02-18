@@ -1,0 +1,6 @@
+
+1. index Html: Form의 입력 값이 이동
+2. Create.jsp로 이동
+	1) 입력한 값 받아오기
+	2) vo를 만들어서 값 집어넣음-MemberVO
+	3) vo를 dao의 create()의 입력값으로 주면서 호출 (쿼리를 돌린다.) -MemberDAO

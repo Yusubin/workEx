@@ -1,0 +1,16 @@
+package ex01;
+
+import javax.swing.JOptionPane;
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String a1 = JOptionPane.showInputDialog("숫자1 입력");
+		String a2 = JOptionPane.showInputDialog("숫자1 입력");
+		int a=Integer.parseInt(age);
+		System.out.println(a);
+		JOptionPane.showMessageDialog(null, "내년나이는"+(a+1));
+	}
+
+}

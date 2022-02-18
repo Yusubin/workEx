@@ -1,0 +1,18 @@
+package pack01;
+
+import java.awt.Button;
+
+import javax.swing.JFrame;
+
+public class MyWindow {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		JFrame view = new JFrame();
+		view.setSize(200,200);
+		Button btn1 =new Button();
+		Button btn2 =new Button();
+	}
+
+}

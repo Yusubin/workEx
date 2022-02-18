@@ -1,0 +1,63 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ page import="java.sql.*"%>
+<%@ page import="java.text.SimpleDateFormat"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+    table {
+        width: 100%;
+        border-top: 1px solid #444444;
+        border-collapse: collapse;
+    }
+    th, td {
+        border-bottom: 1px solid #444444;
+        padding: 10px;
+    }
+</style>
+<script>
+function search(){
+    var frm = document.form;
+    
+    //if(frm.searchValue.value == ''){
+        //alert('검색어를 입력해주세요.');
+        //return;
+    //}
+    
+    frm.submit();
+}
+
+function insert(){
+    location = "member.html";
+}
+</script>
+</head>
+<body>
+	<h2>글 목록</h2>
+	<form action="boardList.jsp" name="form">
+	    <input type="text" name="searchValue">
+	    <input type="button" onclick="search()" value="검색">
+	    <input type="button" onclick="insert()" value="글작성">
+	</form>
+	<table>
+	    <tr>
+	        <td>시퀀스</td>
+	        <td>제목</td>
+	        <td>내용</td>
+	        <td>작성자</td>
+	        <td>등록일</td>
+	    <tr>
+	    <tr>
+	        <td></td>
+	        <td></td>
+	        <td></td>
+	        <td></td>
+	        <td></td>
+	    <tr>
+	
+	</table>
+</body>
+</html>

@@ -1,0 +1,25 @@
+package pack03;
+
+public class accountMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		accountVO ac=new accountVO();
+		accountVO ac1=new accountVO();
+		accountVO ac2=new accountVO();
+		ac.setAccount_name("튼튼적금");
+		ac.setName("홍길동");
+		ac.setPrice("1000");
+		
+		ac1.setAccount_name("튼튼예금");
+		ac1.setName("박길동");
+		ac1.setPrice("2000");
+		
+		
+		
+		ac2.setAccount_name("다음예금");
+		ac2.setName("홍기사");
+		ac2.setPrice("3000");
+	}
+
+}

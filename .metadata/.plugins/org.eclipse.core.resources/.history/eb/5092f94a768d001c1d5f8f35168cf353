@@ -1,0 +1,10 @@
+package test00;
+
+public class MemberVO {
+
+	private String id;
+	private String id;
+	private String id;
+	private Timestamp rgstday;
+	private String id;
+}

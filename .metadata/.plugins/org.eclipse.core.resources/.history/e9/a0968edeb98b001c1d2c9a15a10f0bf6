@@ -1,0 +1,26 @@
+package pack01;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class MyWindow {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		JFrame view = new JFrame();
+		
+		
+//		JPanel jpane= new JPanel();
+		
+		JButton btn1 =new JButton();
+		JButton btn2 =new JButton();
+		
+		
+		view.add(btn1);
+		view.add(btn2);
+	}view.setSize(200,200);
+	view.setVisible(true);
+
+}

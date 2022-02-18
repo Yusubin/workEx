@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	</head>
+	<body>
+	<h1>글 작성</h1>
+	<hr color="blue">	
+	<form action="create.jsp">
+	제목:<input type="text" name="title"><br>
+	글쓴이:<input type="text" name="name"><br>
+	내용:<input type="text" name="content" style="width:400px; height:300px"><br>
+
+	<button>글작성</button>
+	
+	
+	</form> 
+	<h1>글 수정</h1>
+	<hr color="yellow">	
+	<form action="update.jsp">
+	시퀀스:<input type="text" name="idx"><button>확인</button><br>
+	제목:<input type="text" name="title" value="<%=title%>"><br>
+	내용:<input type="text" name="content" style="width:400px; height:300px"value="<%=title%>"><br>
+	<button>글 수정</button>
+	</form> 
+	
+	<h1>글 삭제</h1>
+	<hr color="red">	
+	<form action="delete.jsp">
+	시퀀스:<input type="text" name="idx"><br>
+	<button>삭제</button>
+	</form> 
+</html>

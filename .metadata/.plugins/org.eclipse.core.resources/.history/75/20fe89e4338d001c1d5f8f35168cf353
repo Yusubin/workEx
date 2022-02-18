@@ -1,0 +1,17 @@
+package pack02;
+
+import test02.returnExercise;
+
+public class returnMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        returnExercise re= new returnExercise();
+        
+       
+        
+        System.out.println(re);
+        System.out.println(re.add("5",1));
+	}
+
+}

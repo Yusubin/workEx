@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" url="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Download</title>
+<body>
+<c:forEach var="file" item="$(file_list)" varStatus="status">
+<c:forEach>
+	<a href="/project06/fileDownload?fileName=?">다운로드</a>
+</body>
+</html>

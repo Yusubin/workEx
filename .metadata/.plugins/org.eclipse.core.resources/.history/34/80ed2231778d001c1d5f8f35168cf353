@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@page import="test00.boardDAO"%>
+<%@page import="test00.boardVO"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+  <%
+  //1. 클라이언트가 입력해서 서버로 보낸 데이터를 받아주어야함
+  String title= request.getParameter("title");
+  String content =  request.getParameter("content");
+  String name = request.getParameter("name");
+  boardVO = new boardVO();
+  vo.setId(title);
+  vo.setPw(content);
+  vo.setName(name);
+  vo.setTel(tel);
+  //ctrl+shft+m
+  boardDAO dao = new boardDAO();
+  dao.create(vo);
+  
+  %> 
+</body>
+</html>

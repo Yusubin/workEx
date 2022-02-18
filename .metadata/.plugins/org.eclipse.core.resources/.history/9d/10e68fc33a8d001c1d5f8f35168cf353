@@ -1,0 +1,11 @@
+package pack03;
+
+public class MemberVO {
+	//데이터를 전달할때 데이터들을 널어줄 가방역할의 클래스 
+	//변수 만들어서 값만 넣었
+	
+	
+	int idx;
+	String id;
+	
+}

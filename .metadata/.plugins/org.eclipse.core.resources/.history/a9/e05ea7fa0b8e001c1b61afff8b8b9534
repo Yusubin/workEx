@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>글 삭제</h1>
+	<hr color="red" >	
+	<form action="delete.jsp" method="get">
+		시퀀스:<input type="text" name="idx"><br>
+	<button>삭제</button>
+	</form> 
+		<button onclick="location = 'boardList.jsp';">글 목록</button>
+	<button onclick="location = 'modifyForm.html';">글 수정</button>
+	<button onclick="location = 'index.html';">글 작성</button>
+</body>
+</html>

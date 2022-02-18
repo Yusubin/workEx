@@ -1,0 +1,23 @@
+package pack02.subPack;
+
+public class RoomMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		TV mytv=new TV();
+		TV yourtv=new TV();
+		
+		
+		mytv.ch=7;
+		mytv.vol=9;
+		mytv.onOff=true;
+
+		System.out.println(mytv);
+		
+//		yourtv.ch=9;
+//		yourtv.vol=12;
+//		yourtv.onOff=true;
+		
+	}
+
+}

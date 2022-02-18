@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>회원가입</title>
+	<style>
+        table {
+            width: 100%;
+            border-top: 1px solid #444444;
+            border-collapse: collapse;
+        }
+        th, td {
+            border-bottom: 1px solid #444444;
+            padding: 10px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script>
+    function insert(){
+    	var frm = document.form;
+    	
+    	if(frm.idcheck.value == '0'){
+    		alert('아이디 중복 확인을 해주세요.');
+    		return;
+    	}
+    	
+    	if(frm.m_name.value == ""){
+    		alert("이름을 입력해주세요.");
+    		return;
+    	}
+    	
+    	if(frm.m_id.value == ""){
+    		alert("아이디를 입력해주세요.");
+    		return;
+    	}
+    	
+    	if(frm.m_pw.value == ""){
+    		alert("비밀번호를 입력해주세요.");
+    		return;
+    	}
+    	
+    	if(frm.m_phone.value == ""){
+    		alert("전화번호를 입력해주세요.");
+    		return;
+    	}
+    	
+    	if(frm.m_email.value == ""){
+    		alert("이메일을 입력해주세요.");
+    		return;
+    	}
+    	
+    	if(confirm("회원가입하시겠습니까?")){
+    		frm.submit();
+    	}
+    }
+    
+    function cancel(){
+    	location = "memberList.jsp";
+    }
+    
+    function id_check(){
+    	//---- jquery Ajax
+    	if($('#m_id').val() == ''){
+    		alert('아이디를 입력해주세요.');
+    		return;
+    	}
+    	
+    	$.ajax({
+    		url : '/firstweb/idcheck.jsp',
+    		data:{'m_id':$('#m_id').val()},
+    		method:'get',
+            beforeSend:function(){
+                //URL 전송전에 작업할 내용
+                //console.log('beforeSend');
+            },
+            success:function(data){
+                //성공적으로 URL 전송하고난 내용
+                if(data == "false"){
+                	//alert("아이디를 사용할수 있습니다.");
+                	if(confirm("아이디를 사용하시겠습니까?")){
+                		$('#idcheck').val('1');
+                		$('#m_id').attr('readonly',true);
+                	}
+                }else{
+                	alert("아이디를 사용할수 없습니다.");
+                }
+            },
+            error:function(){
+                //오류 났을때 사용하는 내용
+                //console.log('Error');
+            },
+            complete:function(){
+                //모든 것이 끝나고 마지막으로 정리하는 내용
+                //console.log('Complete');
+            }
+    		
+    		//---- true면 아이디 사용가능
+    		//---- false면 아이디 사용불가능
+    	});
+    }
+    </script>
+</head>
+<body>
+	<h2>회원가입</h2>
+	<form action="memberInsert.jsp" name="form" method="post">
+	<input type="hidden" name="idcheck" id="idcheck" value="0"/>
+	<table>
+		<tr>
+			<td>이름</td>
+			<td><input type="text" name="m_name"></td>
+		</tr>
+		<tr>
+			<td>아이디</td>
+			<td><input type="text" name="m_id" id="m_id"><input type="button" onclick="id_check()" value="중복확인"></td>
+		</tr>
+		<tr>
+			<td>비밀번호</td>
+			<td><input type="text" name="m_pw"></td>
+		</tr>
+		<tr>
+			<td>전화번호</td>
+			<td><input type="text" name="m_phone"></td>
+		</tr>
+		<tr>
+			<td>이메일</td>
+			<td><input type="text" name="m_email"></td>
+		</tr>
+	</table>
+	<input type="button" onclick="insert()" value="저장">
+	<input type="button" onclick="cancel()" value="취소">
+	</form>
+</body>
+</html>

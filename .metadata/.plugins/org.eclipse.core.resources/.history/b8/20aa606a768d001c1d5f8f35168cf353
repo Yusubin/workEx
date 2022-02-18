@@ -1,0 +1,44 @@
+package test00;
+
+import java.sql.Timestamp;
+
+public class MemberVO {
+
+	private String title;
+	
+	private String content;
+	private String name;
+	private Timestamp rgstday;
+	private int idx;
+	
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public Timestamp getRgstday() {
+		return rgstday;
+	}
+	public void setRgstday(Timestamp rgstday) {
+		this.rgstday = rgstday;
+	}
+	public int getIdx() {
+		return idx;
+	}
+	public void setIdx(int idx) {
+		this.idx = idx;
+	}
+}

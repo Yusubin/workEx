@@ -1,0 +1,41 @@
+package web.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
+
+public class LoginDAO {
+private DataSource dataFactory;
+	//DB커넥션 풀에서 connection알아오기(JNDI)
+	public  LoginDAO() {
+		try {
+			Context ctx = new InitialContext();
+			Context envContext = (Context) ctx.lookup("java:/comp/env");
+			dataFactory = (DataSource)envContext.lookup("jdbc/mariadb");
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+	public int login(String user_id, String user_pw) {
+		int m_idx=0;
+		
+		Connection con = null;     
+		PreparedStatement pstmt  = null; 
+		ResultSet rs   = null;       
+		con = dataFactory.getConnection();
+		
+		pstmt = con.prepareStatement(query);
+		rs = pstmt.executeQuery();
+		
+		String query="SELECT m_idx FROM member WHERE m_id=? AND m_pw=?";
+		return m_idx;
+	}
+	
+}

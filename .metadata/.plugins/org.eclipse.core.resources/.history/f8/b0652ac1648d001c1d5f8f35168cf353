@@ -1,0 +1,18 @@
+package pack03;
+
+public class DBConnect {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//db 프로그램 순서
+		//1. Connector 라이브러리 설정
+		
+		Class.forName("com.mysql.jsbc.Driver");
+		PreparedS
+		//2. db 연결 승인된 사용자 (ip+port, user(root), pw db명(big))  
+		//3. SQL생성
+		//4. 생성한 sql문을 mysql로 보낸다. 
+	
+	}
+
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	</head>
+	<body>
+	<h1>글 작성</h1>
+	<hr color="blue">	
+	<form action="create.jsp">
+	제목:<input type="text" name="title"><br>
+	글쓴이:<input type="text" name="name"><br>
+	내용:<input type="text" name="content" style="width:400px; height:300px"><br>
+	<button>글작성</button>
+	</form> 
+	
+	
+</html>

@@ -1,0 +1,19 @@
+package pack02.subPack;
+
+public class Phone {
+	int myNumber;
+	int yourNumber;
+	int vol;
+	boolean onOff;
+	
+	public String call(int time) {
+		System.out.println(time+"시에 tv를 킴");
+		
+		return "OK";
+	}
+	
+	public String toString() {	
+		return number+","+vol+","+onOff;
+	}
+
+}

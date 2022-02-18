@@ -1,0 +1,28 @@
+package web.dao;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
+
+public class LoginDAO {
+private DataSource dataFactory;
+	
+	public  LoginDAO() {
+		try {
+			Context ctx = new InitialContext();
+			Context envContext = (Context) ctx.lookup("java:/comp/env");
+			dataFactory = (DataSource)envContext.lookup("jdbc/mariadb");
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+	public int login(String user_id, String user_pw) {
+		int m_idx=0;
+		String query="SELECT m_idx FROM member WHERE m_idx=?"
+		return m_idx;
+	}
+	
+}

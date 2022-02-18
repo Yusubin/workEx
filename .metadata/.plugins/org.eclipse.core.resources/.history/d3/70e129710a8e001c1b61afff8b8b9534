@@ -1,0 +1,51 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ page import="java.sql.*"%>
+<%@ page import="java.text.SimpleDateFormat"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>글 목록</h2>
+
+<form action="boardList.jsp" name="form">
+    <input type="text" name="searchValue" value="<%=searchValue%>">
+    <input type="button" onclick="search()" value="검색">
+    <input type="button" onclick="insert()" value="회원가입">
+</form>
+<table>
+    <tr>
+        <td>시퀀스</td>
+        <td>제목</td>
+        <td>내용</td>
+        <td>작성자</td>
+        <td>등록일</td>
+    <tr>
+    <%
+        while(rs.next()){
+    %>
+    <tr>
+        <td><%=rs.getString("idx")%></td>
+        <td><%=rs.getString("title")%></td>
+        <td><%=rs.getString("content")%></td>
+        <td><%=rs.getString("name")%></td>
+        <td><%=format1.format(rs.getTimestamp("m_rgstdate"))%></td>
+    <tr>
+    <%
+        }
+    %>
+</table>
+<%
+} catch (SQLException e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
+}
+
+%>
+	
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTf-8">
+<title>로그아웃되었습니다.</title>
+<script>
+alert("로그아웃되었습니다.");
+location="";
+</script>
+</head>
+<body>
+
+</body>
+</html>

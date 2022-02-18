@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+    <jsp:useBean id="vo" class="web.MemberVO">
+    	<jsp:setProperty name="" property=""/>	
+    </jsp:useBean>
+
+<%
+String id = request.getParameter("id");
+
+
+//ctrl+shft+m  (in JSP)
+//ctrl+shft+o (in JAVA)
+MemberDAO dao = new MemberDAO();
+ArrayList<MemberVO> list = dao.readAll();
+%>
+    
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

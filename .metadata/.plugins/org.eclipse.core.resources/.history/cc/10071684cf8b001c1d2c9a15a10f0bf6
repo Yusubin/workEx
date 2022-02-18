@@ -1,0 +1,22 @@
+package pack02.subPack;
+
+public class Phone {
+	String myNumber;
+	String yourNumber;
+	boolean call;
+	boolean onOff;
+	
+	public String call(String myNumber) {
+		System.out.println(myNumber+"가 전화중");
+		
+		return "calling";
+	}
+	public String call(String myNumber,String yourNumber="01020192000") {
+		System.out.println(myNumber+"이"+yourNumber+"로 전화중");
+		return "calling";
+	}
+	public String toString() {	
+		return "내 폰번호:"+myNumber+"상대방 폰번호:"+yourNumber+","+onOff;
+	}
+
+}

@@ -1,0 +1,61 @@
+package web.controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import web.dao.MemberDAO;
+import web.vo.MemberVO;
+
+/**
+ * Servlet implementation class memberCorrectionServlet
+ */
+@WebServlet("/memberCorrection")
+public class memberCorrectionServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("utf-8");
+
+
+		HttpSession session =request.getSession();
+				
+				if(session.getAttribute("user_id")==null) {
+					response.sendRedirect("login.html");
+				}else {
+					int m_idx=Integer.parseInt(request.getParameter("m_idx"));
+					MemberDAO memberDAO = new MemberDAO();
+					MemberVO memberVO =memberDAO.member_view(m_idx);
+				
+					
+					request.setAttribute("member", memberVO);
+					RequestDispatcher dispatch = request.getRequestDispatcher("/WEB-INF/jsp/memberCorrection.jsp");
+					dispatch.forward(request, response);
+				}
+				
+		}
+//		memberVO.setM_pw((String)request.getParameter("m_pw"));
+//		memberVO.setM_email((String)request.getParameter("m_email"));
+//		memberVO.setM_phone((String)request.getParameter("m_phone"));
+//		memberVO.setM_name((String)request.getParameter("m_name"));
+//		
+//		memberDAO.member_correction(memberVO);
+//		
+//		
+//		response.setContentType("text/html; charset=utf-8");
+//		PrintWriter out =response.getWriter();
+//		request.setAttribute("member", memberVO);
+//		RequestDispatcher dispatch = request.getRequestDispatcher("/WEB-INF/jsp/memberCorrection.jsp");
+//		dispatch.forward(request, response);
+		
+		
+		
+	}
+
+}
